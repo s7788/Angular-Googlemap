@@ -16,9 +16,14 @@
 </div>
 <h1></h1>
 <div style="text-align:left;">
-  <button type="button" mat-button (click)="drawer.toggle()">
-    隱藏標題列
-  </button>
+  <br>
+  <button mat-raised-button mat-button (click)="drawer.toggle()">隱藏標題列</button>
+  <br>
+  <form class="example-form">
+    <mat-form-field class="example-full-width" style="width:50%">
+      <input matInput placeholder="Name" value="Tedd">
+    </mat-form-field>
+  </form>
 </div>
 <mat-drawer-container class="example-container" autosize style="width:940px">
   <mat-drawer #drawer class="example-sidenav" mode="side" opened="true" style="width:20%">
@@ -36,7 +41,7 @@
     </ul>
     <input type="text" [(ngModel)]="InputMsg">
     <br>
-    <button (click)="Send()">送出</button>
+    <button mat-raised-button mat-button (click)="Send()">送出</button>
   </mat-drawer>
   <div style="width:940px">
     latitude =

@@ -6,11 +6,9 @@ import { FormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { MatInputModule, MatButtonModule } from '@angular/material';
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     FormsModule,
@@ -18,9 +16,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       apiKey: 'AIzaSyBuKLtw_70R-MU2huExyOTPA4xZsYLpOhs'
     }),
     MatSidenavModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule
   ],
+  exports: [MatInputModule, MatButtonModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
