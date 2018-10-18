@@ -42,7 +42,7 @@
     latitude =
     <input type="text" [(ngModel)]="lat" /><br> longitude =
     <input type="text" [(ngModel)]="lng" />
-    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoomValue" (mapClick)="showLocation()">
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoomValue">
       <agm-marker [latitude]="lat" [longitude]="lng" [iconUrl]="iconUrl" (mouseOut)="leave()" (mouseOver)="over()" (markerClick)="markerClick(infowindow)"></agm-marker>
       <agm-info-window #infowindow [latitude]="lat+0.0005" [longitude]="lng" [hidden]="!isOpen">
         <div>
@@ -52,6 +52,5 @@
       </agm-info-window>
     </agm-map>
     <br>
-
   </div>
 </mat-drawer-container>
